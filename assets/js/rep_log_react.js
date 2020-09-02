@@ -1,7 +1,12 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom';
+import RepLogApp from './RepLog/RepLogApp';
 
-const el = <h2>Lift Stuff ! <span>💪🏽 </span></h2>
+const shouldShowMuscle = true;
 
-console.log(el);
-ReactDom.render(el, document.getElementById('lift-stuff-app'));
+render(<div>
+    <RepLogApp withMuscle={shouldShowMuscle}/>
+    </div>
+    ,
+    document.getElementById('lift-stuff-app')
+);
